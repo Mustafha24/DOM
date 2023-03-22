@@ -16,16 +16,20 @@
 
         var val1=document.getElementById('val').innerText
         val1=0
-        // console.log(val1.innerText,typeof(val1.innerText));
-        // var val2=Number(val1)
-        // console.log(typeof(val2));
+       
         function incr() {
+            
             val1=val1+1
             document.getElementById('val').innerText=val1
         }
         function decr() {
+            if(val1>0){
             val1=val1-1
             document.getElementById('val').innerText=val1
+           }
+           else{
+                    alert("Negative values not allowed")
+           }
         }
         function reset() {
             val1=0
