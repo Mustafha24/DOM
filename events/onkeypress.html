@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        p{
+            font-size: 1.2em;
+        }
+        [type="text"]{
+            width: 10%;
+            height: 60px;
+            border-radius: 6px;
+        }
+       
+    </style>
+</head>
+<body>
+    <input type="text" id="box" placeholder="Type Some text">
+    <p id="keyname"></p>
+    <script>
+            let box=document.getElementById('box')
+            let name=document.getElementById('keyname')
+            box.addEventListener('keypress',function(e){
+                name.innerText="You have pressed "+e.key
+            })
+    </script>
+</body>
+</html>

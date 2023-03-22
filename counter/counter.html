@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="val">0</p>
+    <button class="btn" onclick="incr()">Increment</button>
+    <button class="btn" onclick="decr()">Decrement</button>
+    <button class="btn" onclick="reset()">Reset</button>
+
+    <script>
+
+        var val1=document.getElementById('val').innerText
+        val1=0
+        // console.log(val1.innerText,typeof(val1.innerText));
+        // var val2=Number(val1)
+        // console.log(typeof(val2));
+        function incr() {
+            val1=val1+1
+            document.getElementById('val').innerText=val1
+        }
+        function decr() {
+            val1=val1-1
+            document.getElementById('val').innerText=val1
+        }
+        function reset() {
+            val1=0
+            document.getElementById('val').innerText=val1
+        }
+    </script>
+</body>
+</html>

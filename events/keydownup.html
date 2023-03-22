@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           
+            height: 100vh;
+        }
+
+        p{
+            font-size: 1.2em;
+        }
+        [type="text"]{
+            width: 10%;
+            height: 60px;
+            border-radius: 6px;
+        }
+       
+    </style>
+</head>
+<body>
+    <input type="text" id="box" placeholder="Type Some text">
+    <div>
+    <p id="up"></p><br>
+    <p id="down"></p></div>
+    <script>
+            let box=document.getElementById('box')
+            let up=document.getElementById('up')
+            let down=document.getElementById('down')
+            box.addEventListener('keyup',function(e){
+                up.innerText="Keyup "+e.key
+            })
+            box.addEventListener('keydown',function(e){
+                down.innerText="Keydown: "+e.key
+            })
+    </script>
+</body>
+</html>
